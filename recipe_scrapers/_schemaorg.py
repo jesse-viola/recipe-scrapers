@@ -71,6 +71,8 @@ class SchemaOrg:
         category = self.data.get("recipeCategory")
         if isinstance(category, list):
             return ",".join(category)
+        elif isinstance(category, str):
+            return [normalize_string(category)]
         return category
 
     def author(self):
@@ -201,6 +203,8 @@ class SchemaOrg:
             return "\n".join(
                 normalize_string(instruction) for instruction in instructions_gist
             )
+        elif isinstance(instructions, str):
+            return [normalize_string(instructions)]
 
         return instructions
 
@@ -223,6 +227,8 @@ class SchemaOrg:
             raise SchemaOrgException("No cuisine data in SchemaOrg.")
         elif isinstance(cuisine, list):
             return ",".join(cuisine)
+        elif isinstance(cuisine, str):
+            return [normalize_string(cuisine)]
         return cuisine
 
     def description(self):
