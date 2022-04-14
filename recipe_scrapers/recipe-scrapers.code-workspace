@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#7DB8F4",
+			"titleBar.activeBackground": "#9FCAF7",
+			"titleBar.activeForeground": "#041A30"
+		},
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "pylint",
+	}
+}
